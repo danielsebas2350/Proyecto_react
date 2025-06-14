@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      const segment = 1; // Ajusta si tu repo está en una subruta
+      const repo = window.location.pathname.split('/')[segment] || '';
+      sessionStorage.redirect = '/' + repo + window.location.pathname;
+      window.location.href = '/' + repo;
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
